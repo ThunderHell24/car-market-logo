@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'Avant';
+  src: url("../fonts/AvantGarde-Demi.woff2") format("woff2"), url("../fonts/AvantGarde-Demi.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avant';
+  src: url("../fonts/AvantGardeCTT-Bold.woff2") format("woff2"), url("../fonts/AvantGardeCTT-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Interval Next';
+  src: url("../fonts/IntervalNext.woff2") format("woff2"), url("../fonts/IntervalNext.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,18 +29,82 @@
           box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+}
+
+h1, h2 {
+  font-family: Avant, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.main {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: main;
+  width: 18rem;
+  color: #261f0f;
+  letter-spacing: .23rem;
+  font-size: 2.4rem;
+}
+
+.additional {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: add;
+  color: #00adff;
+  font-size: 2.3rem;
+  letter-spacing: 0.23rem;
+  width: 9rem;
+  margin: 0;
+  height: 2.6rem;
+      justify-self: start;
+}
+
+.desc {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: desc;
+  font-family: 'Interval Next', sans-serif;
+  text-transform: uppercase;
+  font-size: .85rem;
+  color: #261f0f;
+  width: 6.5rem;
+  height: 2.6rem;
+  letter-spacing: 0.04rem;
+  padding-left: 0.3rem;
+  padding-top: 0.25rem;
+  -webkit-align-self: end;
+      -ms-flex-item-align: end;
+          align-self: end;
+}
+
 .logo {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.text {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+      grid-template-areas: "main main" "add desc";
+  -ms-grid-columns: 9rem 9rem;
+      grid-template-columns: 9rem 9rem;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,9 +1,70 @@
+@font-face
+    font-family: 'Avant'
+    src: url('../fonts/AvantGarde-Demi.woff2') format('woff2'), url('../fonts/AvantGarde-Demi.woff') format('woff')
+    font-weight: normal
+    font-style: normal
+    font-display: swap
+
+@font-face
+    font-family: 'Avant'
+    src: url('../fonts/AvantGardeCTT-Bold.woff2') format('woff2'), url('../fonts/AvantGardeCTT-Bold.woff') format('woff')
+    font-weight: bold
+    font-style: normal
+    font-display: swap
+@font-face
+    font-family: 'Interval Next'
+    src: url('../fonts/IntervalNext.woff2') format('woff2'), url('../fonts/IntervalNext.woff') format('woff')
+    font-weight: 300
+    font-style: normal
+    font-display: swap
+$blue: #00adff
+$brown: #261f0f    
 *
     margin: 0
     padding: 0
     box-sizing: border-box
-
+html
+    font-size: 10px
+h1, h2
+    font-family: Avant, sans-serif
+    text-transform: uppercase
+    font-weight: bold
+.main
+    grid-area: main
+    width: 18rem
+    color: $brown
+    letter-spacing: .23rem
+    font-size: 2.4rem
+.additional
+    grid-area: add
+    color: $blue
+    font-size: 2.3rem
+    letter-spacing: 0.23rem
+    width: 9rem
+    margin: 0
+    height: 2.6rem
+    justify-self: start
+.desc
+    grid-area: desc
+    font-family: 'Interval Next', sans-serif
+    text-transform: uppercase
+    font-size: .85rem
+    color: $brown
+    width: 6.5rem
+    height: 2.6rem
+    letter-spacing: 0.04rem
+    padding-left: 0.3rem
+    padding-top: 0.25rem
+    // justify-self: start
+    align-self: end
+    // line-height: 1rem
 .logo
     display: flex
-    justify-content: center
+    justify-content: flex-end
     align-items: center
+.text
+    display: grid
+    // place-items: center
+    align-items: flex-end
+    grid-template-areas: "main main" "add desc"
+    grid-template-columns: 9rem 9rem
