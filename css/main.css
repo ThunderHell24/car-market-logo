@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-div {
+.logo {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
